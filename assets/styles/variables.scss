@@ -1,7 +1,17 @@
+/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/bebasneue */
+@import "http://fonts.fontstorage.com/import/bebasneue.css";
+/*
+	Bebas Neue, 100, 200, 300, 400, 700
+*/
+/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/roboto */
+@import "http://fonts.fontstorage.com/import/roboto.css";
+/*
+	Roboto, 100, 100 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 700, 700 italic, 900, 900 italic
+*/
 
 
 
 $main-background-color: #9789f9;
 $main-font: "Roboto";
 $header-font: "Bebas Neue";
-$color-font: #181818;;
+$color-font: #181818;
