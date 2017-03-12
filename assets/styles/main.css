@@ -1,19 +1,10 @@
-/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/bebasneue */
-@import "http://fonts.fontstorage.com/import/bebasneue.css";
-/*
-	Bebas Neue, 100, 200, 300, 400, 700
-*/
-/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/roboto */
-@import "http://fonts.fontstorage.com/import/roboto.css";
-/*
-	Roboto, 100, 100 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 700, 700 italic, 900, 900 italic
-*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -529,6 +520,24 @@ img {
 
 .ba-width-1-10 {
   width: 10%; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue-webfont.woff2") format("woff2"), url("../fonts/bebasneue-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../fonts/bebasneue_bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: bold; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneue_light-webfont.woff2") format("woff2"), url("../fonts/bebasneue_light-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: light; }
 
 body {
   background: #9789f9;
