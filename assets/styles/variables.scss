@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/bebasneue-webfont.woff2') format('woff2'),
+  url('../fonts/bebasneue-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+  url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: bold;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/bebasneue_light-webfont.woff2') format('woff2'),
+  url('../fonts/bebasneue_light-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: light;
+
+}
+
+$main-background-color: #9789f9;
+$main-font: 'Roboto', sans-serif;
+$header-font: "Bebas Neue";
+$color-font: #181818;

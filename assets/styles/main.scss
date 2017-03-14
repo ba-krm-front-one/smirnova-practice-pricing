@@ -1,0 +1,239 @@
+@import "normalize.scss";
+@import "layout.scss";
+@import "variables.scss";
+
+body {
+  background: $main-background-color;
+  font-family: "Roboto", sans-serif;
+}
+
+#plans {
+  margin-top: 160px;
+  margin-bottom: 145px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  flex-grow: 1;
+  max-width: 347px;
+  min-width: 300px;
+  height: 631px;
+  padding: 20px 10px;
+
+  &__background {
+    box-shadow: 2px 4px 59px #7a6be7 ;
+    background-color: #f5f4f9 ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title{
+    height: 225px;
+    width: 100%;
+    text-align: center;
+    font-family: $header-font;
+    position: relative;
+    letter-spacing: 0.08em;
+  }
+
+  &__price{
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 45px;
+    margin-top: 39px;
+    margin-bottom: 24px;
+
+    &:before{
+      content: "$";
+      font-size: 24px;
+      line-height: 24px;
+      vertical-align: top;
+      margin-right: 2px;
+    }
+    &:after{
+      content: "/HR";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      margin-left: 3px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__direction{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__details {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 325px;
+    background-color: #ffffff;
+
+    &:before {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 140px;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      content: ' ';
+      background: inherit;
+      top: -70px;
+    }
+  }
+
+  &__icon{
+    position: absolute;
+    z-index: 2;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+  }
+
+  &__list{
+    margin: 16px auto 0;
+    display: table;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  &__items{
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 53px;
+    z-index: 2;
+  }
+
+  &--primary {
+    max-width: 390px;
+    height: 711px;
+    .plan__title{
+      height: 255px;
+    }
+    .plan__details{
+      height: 354px;
+    }
+    .plan__list {
+      margin-top: 30px;
+    }
+    .plan__price{
+      margin-top: 49px;
+    }
+    .plan__footer{
+      height: 90px;
+    }
+  }
+
+  &__buble{
+    background: url("../images/buble.png") no-repeat;
+    width: 59px;
+    height: 56px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-family: $header-font;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    p{
+      margin: 19px;
+      transform: translateX(-20%);
+    }
+
+
+    &--name{
+      background: url("../images/tooltip-bg.png") no-repeat;
+      width: 101px;
+      height: 30px;
+      position: absolute;
+      right: -86px;
+      top: 30px;
+      color: #ffffff;
+      font-family: $header-font;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 30px;
+      visibility: hidden;
+      p{
+        transform: translateY(-50%);
+      }
+
+    }
+  }
+  
+
+  &__footer{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__purchase-btn{
+    position: absolute;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    bottom: 0;
+    width: 203px;
+    height: 54px;
+    box-shadow: 2px 4px 18px rgba(133, 192, 247, 0.31);
+    border-radius: 27px;
+    border: none;
+    background-color: #6fcffb;
+    outline: none;
+    color: #ffffff;
+    font-family: $header-font;
+    font-size: 18px;
+    font-weight: 400;
+
+  }
+  &__proposal{
+    color: #a9a9a9;
+    font-size: 11px;
+    font-weight: 300;
+    padding-top: 46px;
+    margin: 0;
+    visibility: hidden;
+  }
+  &:hover &__purchase-btn{
+    transform: translate(-50%, -50%);
+    top: 0;
+    box-shadow: 2px 4px 18px rgba(253, 141, 123, 0.31);
+    background-color: #fd8d7b;
+    transition: .3s ease-in;
+  }
+  &:hover &__proposal{
+    visibility: visible;
+  }
+}
+
+.plan__buble:hover + .plan__buble--name{
+  visibility: visible;
+}
+
+
+@media all and (max-width: 915px) {
+  .plan {
+    &--primary {
+      order: -1;
+    }
+  }
+}
